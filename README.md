@@ -1,5 +1,5 @@
 Bsc Node Syncing Steps
-//
+`
 Download geth and mainnet using wget from the link below
 https://github.com/bnb-chain/bsc/releases/tag/v1.1.8 - Where v1.1.8 is the current latest version (as of 8th March 2022)
 
@@ -37,7 +37,7 @@ The ip address for the websocket is not include in the config.toml. You need to 
 
 
 HAPPY SYNCING
-//
+'
 
 1. mkdir bscNode 
 2. cd bscNode/
