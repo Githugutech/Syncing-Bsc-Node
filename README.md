@@ -68,20 +68,6 @@ wget -q -O - <snapshot URL> | tar -I lz4 -xvf -
 #######################################################################################################################
   
   
-  
- 
-Download the latest snapshot from https://github.com/bnb-chain/bsc-snapshots by using the command below
-wget -q -O - <snapshot URL> | tar -I lz4 -xvf -
-
-Replacing the <snapshot URL> with "THE_URL_TO_THE_LATEST_GETH"   (quotation marks included)
-Once downloaded extract it. It will be extracted to the server folder on the downloaded folder.
-Delete the chaindata and triecache data from the datadir folder (mainnet) if it already exists to sync afresh. Use the commands provided below
-Move the chaindata and triecache data of the downloaded snapshot to your datadir (mainnet) using  the commands below
-
-rm -rf mainnet/geth/chaindata
-rm -rf mainnet/geth/triecache
-mv server/data-seed/geth/chaindata mainnet/geth/chaindata
-mv server/data-seed/geth/triecache mainnet/geth/triecache
 
 After moving the snapshot data, start the geth using the command below.
 Remove logs settings from config.toml so that you can see logs in the terminal in real-time.
