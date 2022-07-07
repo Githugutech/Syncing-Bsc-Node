@@ -71,12 +71,7 @@ wget -q -O - <snapshot URL> | tar -I lz4 -xvf -
   
   
   
-  
-Download geth and mainnet using wget from the link below
-https://github.com/bnb-chain/bsc/releases/tag/v1.1.8 - Where v1.1.8 is the current latest version (as of 8th March 2022)
-
-Make the geth_linux downloaded executable
-Unzip the mainnet
+ 
 move config.toml and genesis.json to the root folder
 run the command ./geth_linux --datadir ./mainnet init genesis.json to generate genesis
 Download the latest snapshot from https://github.com/bnb-chain/bsc-snapshots by using the command below
