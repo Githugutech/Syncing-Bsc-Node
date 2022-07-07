@@ -55,24 +55,3 @@ wget -q -O - <snapshot URL> | tar -I lz4 -xvf -
 13. mv server/data-seed/geth/chaindata mainnet/geth/chaindata
 14. mv server/data-seed/geth/triecache mainnet/geth/triecache
 15. ./geth_linux --config ./config.toml --datadir ./mainnet --cache 100000 --rpc.allow-unprotected-txs --txlookuplimit 0 --http --maxpeers 100 --ws --syncmode=full --snapshot=false --diffsync `to start the sync`
-  
-  
-  
-  
-  
-  
-
-Note:
-Geth syncing should be run in a screen session to ensure the process continues even after the ssh session is closed
-If you are using the latest snapshot and notice that the age more than 2 years, most likely you have an eror in you sync setup
-The first place to troubleshoot in such an issue is check that you have initailised the gennesis config correctly. Make sure that the datadir when initialisng the genesis config is correct.
-In case you want to make a change to the the config.toml file or any other config file, just stop the node sync by control + C. After making the change start the node again with the command for starting the node. The change will pick up
-The ip address for the websocket is not include in the config.toml. You need to manually add it
-
-
-
-HAPPY SYNCING
-
-
-Suggested Tags : geth-node, bsc
-
