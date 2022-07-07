@@ -61,20 +61,6 @@ wget -q -O - <snapshot URL> | tar -I lz4 -xvf -
   
   
   
-  
-  
-  
-  
-#######################################################################################################################
-  
-  
-
-After moving the snapshot data, start the geth using the command below.
-Remove logs settings from config.toml so that you can see logs in the terminal in real-time.
-To remove the logs settings delete the last part of the config.toml file.
-nano config.toml
-Start node sync using the command below
-./geth_linux --config ./config.toml --datadir ./mainnet --cache 100000 --rpc.allow-unprotected-txs --txlookuplimit 0 --http --maxpeers 100 --ws --syncmode=full --snapshot=false --diffsync
 
 Note:
 Geth syncing should be run in a screen session to ensure the process continues even after the ssh session is closed
