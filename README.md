@@ -69,11 +69,7 @@ wget -q -O - <snapshot URL> | tar -I lz4 -xvf -
   
   
   
-  
-  
  
-move config.toml and genesis.json to the root folder
-run the command ./geth_linux --datadir ./mainnet init genesis.json to generate genesis
 Download the latest snapshot from https://github.com/bnb-chain/bsc-snapshots by using the command below
 wget -q -O - <snapshot URL> | tar -I lz4 -xvf -
 
